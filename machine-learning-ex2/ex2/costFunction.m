@@ -27,7 +27,7 @@ for i=1:n,
     grad(i)=(1/m)*sum((h-y)'*X(:,i));
     %(h-y) -> mx1 ... X(:,i)-> mX1 
     % so (mX1)'*(mX1)=> [1] .. no need for sum but
-    (i didnot test it without sum)
+    % (i didnot test it without sum)
 end
 
 % Note: grad should have the same dimensions as theta

@@ -14,7 +14,7 @@ thetaLength=length(theta);
 h=X*theta;
 
 for j=1:thetaLength,
-    theta(j,1)=theta(j,1)-alpha*(1/m)*sum((h-y)'*X(:,j));
+  theta(j,1)=theta(j,1)-alpha*(1/m)*sum((h-y)'*X(:,j));
 end
     % Save the cost J in every iteration    
     J_history(iter) = computeCostMulti(X, y, theta);

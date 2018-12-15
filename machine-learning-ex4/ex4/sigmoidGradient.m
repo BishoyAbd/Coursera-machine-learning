@@ -6,8 +6,9 @@ function g = sigmoidGradient(z)
 %   vector. In particular, if z is a vector or matrix, you should return
 %   the gradient for each element.
 
-g = zeros(size(z));
-
+g_prime = zeros(size(z));
+g_prime=sigmoid(z).*(1-sigmoid(z));
+g=g_prime;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the gradient of the sigmoid function evaluated at
 %               each value of z (z can be a matrix, vector or scalar).

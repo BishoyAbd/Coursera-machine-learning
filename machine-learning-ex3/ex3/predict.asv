@@ -30,7 +30,7 @@ a2=X*Theta1'; %(5000 X 401)(401 X 25) => 5000 X 25
 a2=sigmoid(a2);
 a2=[ones(size(a2,1),1) a2];
 
-out=a2*Theta2'; %(5000 X 26)(26 X 10) => 5000 X 10
+out=a1*Theta2'; %(5000 X 26)(26 X 10) => 5000 X 10
 h=sigmoid(out);
 size(out)
 [i maxIndices]=max(h,[],2);
