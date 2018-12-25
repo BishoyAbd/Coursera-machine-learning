@@ -55,8 +55,9 @@ fprintf('\n==== Processed Email ====\n\n');
 l = 0;
 
 %define variable needed
-num_words=length(vocabList);
 j=1;
+num_words=length(vocabList);
+
 while ~isempty(email_contents)
 
     % Tokenize and also get rid of any punctuation
@@ -103,11 +104,12 @@ while ~isempty(email_contents)
 
 for index=1:num_words,
 if(strcmp(str,vocabList{index}))
+    display(str)
     word_indices(j)=index;
-    j=j+1;
     break;
 end
 end
+j=j+1;
 
 
 

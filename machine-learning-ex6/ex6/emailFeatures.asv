@@ -52,8 +52,8 @@ x = zeros(n, 1);
 
 vocab_indices=1:n;
 for i=1:length(word_indices),
-x(word_indices(i))=1;
-end;
+x=word_indices==vocab_indices';
+
 
 
 
